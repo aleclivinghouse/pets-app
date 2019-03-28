@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 42959,
+  "expoServerNgrokUrl": "https://ac-jma.anonymous.demo.exp.direct",
+  "packagerNgrokUrl": "https://packager.ac-jma.anonymous.demo.exp.direct",
+  "ngrokPid": 42980,
+  "webpackServerPort": null
+}
