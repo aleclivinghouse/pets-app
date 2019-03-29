@@ -12,14 +12,14 @@ import {
 class Home extends React.Component {
   state = {}
 
-  // componentWillMount() {
-  //   this.props.dispatch(login())
-  // }
+  componentWillMount() {
+    console.log('Homeprops', this.props)
+  }
 
   render() {
     return (
      <View>
-      <Text>{this.props.user}</Text>
+      <Text>{this.props.screenProps.user.email}</Text>
      </View>
     )
   }

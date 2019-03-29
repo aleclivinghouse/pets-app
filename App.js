@@ -12,7 +12,7 @@ import Button from './screens/common/Button';
 
 
 class Main extends React.Component {
-  state = {loggedIn: null, register: false};
+  state = {loggedIn: null, register: false, user: {}};
   componentWillMount(){
     firebase.initializeApp({
       apiKey: "AIzaSyDDdQAZX9m82b8S2LN4IuCowj4iQrYaP7g",
@@ -25,7 +25,7 @@ class Main extends React.Component {
 
     firebase.auth().onAuthStateChanged((user) => {
       if(user){
-        this.setState({loggedIn: true})
+        this.setState({loggedIn: true, user: user})
       } else {
         this.setState({loggedIn: false})
       }
@@ -54,7 +54,7 @@ class Main extends React.Component {
       return (
         <View style={styles.containerStyle}>
           <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>
-          <AppContainer/>
+          <AppContainer screenProps={{ user: this.state.user}}/>
         </View>
       );
     } else if(this.state.register === false && this.state.loggedIn === false){
