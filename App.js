@@ -70,8 +70,9 @@ class Main extends React.Component {
 
   render() {
     return (
-     <View>
-     {this.renderContent()}
+     <View style={styles.containerStyle}>
+     <Text>Hello</Text>
+        {this.renderContent()}
       </View>
     );
   }
@@ -88,9 +89,6 @@ const Tab = createBottomTabNavigator({
     screen: Matches,
   }
 });
-
-
-
 const AppContainer = createAppContainer(Tab);
 
 const styles = {
